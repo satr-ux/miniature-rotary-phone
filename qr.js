@@ -1,7 +1,7 @@
 // --- THE TEMPLATE SYSTEM ---
 // Copy/Paste these lines to add more codes
 const qrDatabase = [
-    { id: "forest_01", name: "The Big Oak" },
+    { id: "forest_01", name: "The old Oak" },
     { id: "bench_02", name: "Park Bench" },
     { id: "fountain_03", name: "Water Fountain" },
     { id: "statue_04", name: "Bronze Statue" }
