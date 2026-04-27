@@ -1,4 +1,4 @@
-// --- THE TEMPLATE SYSTEM ---
+
 // Copy/Paste these lines to add more codes
 const qrDatabase = [
     { id: "forest_01", name: "The old Oak" },
@@ -7,9 +7,9 @@ const qrDatabase = [
     { id: "statue_04", name: "Bronze Statue" }
 ];
 
-// --- GAME LOGIC ---
+// dont tuthc: under here
 
-// Initialize storage if it doesn't exist
+
 if (!localStorage.getItem('scanned_tags')) {
     localStorage.setItem('scanned_tags', JSON.stringify([]));
 }
@@ -18,10 +18,10 @@ function updateGameUI() {
     const scannedTags = JSON.parse(localStorage.getItem('scanned_tags'));
     const listContainer = document.getElementById('qr-list');
     
-    // Update Total Count
+    
     document.getElementById('scan-count').innerText = scannedTags.length;
 
-    // Clear and rebuild the list of tags
+    
     if (listContainer) {
         listContainer.innerHTML = '';
         qrDatabase.forEach(qr => {
@@ -50,7 +50,7 @@ function onScanSuccess(decodedText) {
     }
 }
 
-// Only start scanner if we are on the main page
+
 if (document.getElementById('reader')) {
     const scanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
     scanner.render(onScanSuccess);
